@@ -1,0 +1,25 @@
+{
+  "name": "prototipo_pdsi2_fastapi",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clesio-junior/prototipo_PDSI2_FastAPI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clesio-junior/prototipo_PDSI2_FastAPI/issues"
+  },
+  "homepage": "https://github.com/clesio-junior/prototipo_PDSI2_FastAPI#readme",
+  "description": "",
+  "dependencies": {
+    "web-vitals": "^4.2.4"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+  }
+}
