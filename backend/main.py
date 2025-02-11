@@ -5,7 +5,7 @@ import model
 from database import engine, get_db
 from sqlalchemy.orm import Session
 #aaa
-import requests
+import requestCDs
 from bs4 import BeautifulSoup
 #aaaa
 
@@ -16,7 +16,7 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
-    return {"Hello" : "lala"}
+    return {"Hello" : "lalalalalala"}
 
 
 @app.post("/criar", status_code=status.HTTP_201_CREATED)
