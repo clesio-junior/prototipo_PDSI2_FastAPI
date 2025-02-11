@@ -9,9 +9,9 @@
       postgres:
         image: postgres:13
         env:
-          POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: junior
-          POSTGRES_DB: database
+          POSTGRES_USER: ${{ secrets.POSTGRES_USER }}
+          POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
+          POSTGRES_DB: ${{ secrets.POSTGRES_DB }}
         ports:
           - 5432:5432
     steps:
@@ -24,10 +24,10 @@
       - name: update pip
         run: python -m pip install --upgrade pip
       - name: instalar dependencias
-        run: pip install -r requirements.txt
+        run: pip install -r ./backend/requirements.txt
       - name: Esperando o PostgreSQL ficar pronto
         run: sleep 15
       - name: Executar pytest
         env:
-          DATABASE_URL: postgresql://postgres:admin@localhost:5432/nome_database
-        run: pytest teste.py
+          DATABASE_URL: postgresql://${{ secrets.POSTGRES_USER }}:${{ secrets.POSTGRES_PASSWORD }}@localhost:5432/${{ secrets.POSTGRES_DB }}
+        run: pytest ./backend/teste.py
