@@ -5,7 +5,7 @@ import model
 from database import engine, get_db
 from sqlalchemy.orm import Session
 #aaa
-import requestCDs
+import requests
 from bs4 import BeautifulSoup
 #aaaa
 
