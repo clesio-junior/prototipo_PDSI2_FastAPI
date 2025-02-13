@@ -4,10 +4,10 @@ from sqlalchemy.orm import sessionmaker, declarative_base
 
 dotenv.load_dotenv(dotenv.find_dotenv())
 
-user = os.getenv("user")
-password = os.getenv("password")
-host = os.getenv("host")
-database = os.getenv("database")
+user = os.getenv("user", "default_user")
+password = os.getenv("password", "default_password")
+host = os.getenv("host", "localhost")
+database = os.getenv("database", "default_db")
 
 SQLALCHEMY_DATABASE_URL = f"postgresql://{user}:{password}@{host}/{database}"
 
